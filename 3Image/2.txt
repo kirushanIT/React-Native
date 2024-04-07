@@ -1,0 +1,20 @@
+import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, Text, View,Image,ImageBackground } from 'react-native';
+
+const logoImg=require("./assets/adaptive-icon.png");
+export default function App() {
+  return (
+    <View style={{padding:100}}>
+       <Image source={logoImg}  style={{width:200, height:200}}/>
+       <Image source={{ uri:"https://picsum.photos/201 " }}style={{width:200, height:200}}/>
+   
+    <ImageBackground  source= {{uri:"https://picsum.photos/400 "}}>
+      <Text style={{padding:50,color:"red"}}>Image Text</Text>
+    </ImageBackground>
+    </View>
+  );
+}
+
+
+
+

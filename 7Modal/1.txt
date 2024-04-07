@@ -1,0 +1,47 @@
+import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, Text, View ,Image, ScrollView,Button ,Modal} from 'react-native';
+import { useState } from 'react';
+
+
+
+
+export default function App() {
+  const [isModalVisible, setIsModalVisible ]= useState(false);
+  return (
+    <View style={{flex:1,flexDirection:'row',padding: 50,backgroundColor:"plum" }}>
+      <View>
+      <View style={{padding:7,borderWidth:1,borderBlockColor:'#cccc',borderCurve:10}}>
+        <Text>press the button</Text>
+      </View>
+      </View>
+
+      <View style={{paddingLeft:10}} >
+       <Button title='press'
+        onPress={()=>setIsModalVisible(true)}
+        color='midnightblue'
+      />
+      </View>
+        <Modal
+         visible={isModalVisible}
+         onRequestClose={()=>setIsModalVisible(false)}
+         animationType='slide'
+        
+
+         >
+        
+            <View style={{flex:1,padding: 50,backgroundColor:"lightblue" }}>
+              <Text>Modal Content</Text>
+            <Button title='close'
+                    onPress={()=>setIsModalVisible(false)}
+                    color='blue'
+          />
+            </View>
+        </Modal>
+             
+       </View>
+    
+  );
+}
+
+
+

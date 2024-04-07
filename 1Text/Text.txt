@@ -1,0 +1,23 @@
+import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, Text, View } from 'react-native';
+
+export default function App() {
+  return (
+    <View style={{flex:1,alignItems:'center',justifyContent:'center',padding: 25,backgroundColor:"lightblue"}}>
+        <View style={{flexDirection:"row"}}>
+          <Text style={{borderColor:'black' ,fontSize:50,color:"green"}}>Hello  </Text> 
+          <Text style={{borderColor:'black' ,fontSize:50,color:"blue"}}>world. </Text> 
+        </View>
+        
+        <View>
+        <Text style={{color:"red"}}>Welcome to react native</Text>
+        </View>
+        
+  
+    </View>
+    
+  );
+}
+
+
+

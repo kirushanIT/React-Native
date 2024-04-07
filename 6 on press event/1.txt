@@ -1,0 +1,62 @@
+import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, Text, View ,Image, ScrollView,Button,Pressable } from 'react-native';
+const logoImg=require('./assets/adaptive-icon.png');
+export default function App() {
+  return (
+    <View style={{flex:1,flexDirection:'column',padding: 50,backgroundColor:"white" }}>
+      <View>
+     
+      </View>
+
+      <View style={{paddingLeft:10}} >
+       <Button
+        title='press'
+        onPress={()=>console.log("button new pressed")}
+        color='midnightblue'
+        // disabled
+        />
+      </View>
+      <ScrollView>
+         <Pressable onPress={()=> console.log("Image pressed")}>
+         <Image source={logoImg}  style={{width:200, height:200}}/>
+
+         </Pressable>
+         <Pressable onPress={()=> console.log("Text  pressed")}>
+         <Text style={{borderColor:'black' }}>Hello world. Welcome to the very start
+          of your React Native journey! If you're looking for environment setup 
+          instructions, they've moved to their own section. Continue reading for an 
+          introduction to the documentation, Native Components, React, and moreMany
+         different kinds of people use React Native: from advanced iOS developers 
+         to React beginners, to people getting started programming for the first time
+         in their career. These docs were written for all learners, no matter their
+         experience level or background.
+         To work with React Native, you will need to have an understanding of JavaScript
+         fundamentals. If you’re new to JavaScript or need a refresher, you can dive in or brush up at Mozilla Developer Network.
+         While we do our best to assume no prior knowledge of React, Android, or iOS 
+         development, these are valuable topics of study for the aspiring React Native
+         developer. Where sensible, we have linked to resources and articles that go
+         more in depth
+         Hello world. Welcome to the very start
+          of your React Native journey! If you're looking for environment setup 
+          instructions, they've moved to their own section. Continue reading for an 
+          introduction to the documentation, Native Components, React, and moreMany
+         different kinds of people use React Native: from advanced iOS developers 
+         to React beginners, to people getting started programming for the first time
+         in their career. These docs were written for all learners, no matter their
+         experience level or background.
+         To work with React Native, you will need to have an understanding of JavaScript
+         fundamentals. If you’re new to JavaScript or need a refresher, you can dive in or brush up at Mozilla Developer Network.
+         While we do our best to assume no prior knowledge of React, Android, or iOS 
+         development, these are valuable topics of study for the aspiring React Native
+         developer. Where sensible, we have linked to resources and articles that go
+         more in depth.</Text> 
+         </Pressable>
+       <Image source={logoImg}  style={{width:200, height:200}}/>
+       </ScrollView>
+    </View>
+    
+  );
+}
+
+
+
